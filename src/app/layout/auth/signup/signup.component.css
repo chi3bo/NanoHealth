@@ -1,7 +1,6 @@
 .signUp-section {
     width: 100%;
     min-height: 100vh;
-    background-image: url("/assets/images/bg-intro-desktop.png");
     background-color: var(--PrimaryRedColor);
     display: flex;
     justify-content: center;
