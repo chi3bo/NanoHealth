@@ -1,0 +1,192 @@
+.signUp-section {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("/assets/images/bg-intro-desktop.png");
+    background-color: var(--PrimaryRedColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    padding: 48px;
+}
+
+.hero-text h1 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin: 0;
+    color: #fff;
+}
+
+.free-trial-label {
+    border-radius: 8px;
+    background-color: var(--AccentColor);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 8px rgba(0, 0, 0, 0.151);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover{
+        transform: translateY(-2px);
+            box-shadow: 3px 3px 10px hsl(248, 96%, 81%);
+    }
+}
+
+.form-div {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    color: #fff;
+    padding: 32px;
+    box-shadow: 0px 8px rgba(0, 0, 0, 0.151);
+}
+
+.form-div .input-div{
+    margin-bottom: 15px;
+    text-align: end;
+    position: relative;
+}
+
+.form-div input {
+    padding: 15px 25px;
+    font-size: 14px;
+}
+
+input:focus {
+    border: 1px solid var(--AccentColor);
+    box-shadow: none;
+}
+
+input::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-div input.invalid-input{
+border: rgba(255, 0, 0, 0.733) 1px solid ;
+}
+
+.error-Msg{
+    font-size: 13px;
+    color: rgba(255, 0, 0, 0.733) !important;
+    font-style: italic;
+}
+
+.form-div button {
+    border-radius: 8px;
+    color: #fff;
+    background-color: var(--PrimarygreenColor);
+    padding-block: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: all .3s;
+    &:hover{
+        transform: translateY(-1px);
+            box-shadow: 3px 3px 10px hsla(154, 54%, 54%, 0.63);
+    }
+}
+
+.form-div span {
+    font-size: 13px;
+    color: black;
+    font-weight: 400;
+    color: var(--NeutralGrayishColor);
+}
+
+.form-div span.terms {
+    font-size: 13px;
+    color: var(--PrimaryRedColor);
+    font-weight: 400;
+    cursor: pointer;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.error-icon{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+
+
+/* ************************************************************************************************* */
+/* **********************************    start media QUERY    ************************************** */
+/* ************************************************************************************************* */
+
+@media screen and (max-width:992px) {
+    .signUp-section {
+        padding-block: 50px;
+    }
+}
+
+@media screen and (max-width:567px) {
+    .signUp-section {
+        padding-block: 50px;
+    }
+
+    .hero-text {
+        padding: 48px 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .free-trial-label {
+        padding: 15px 50px;
+        font-size: 14px;
+        box-shadow: 0px 6px rgba(0, 0, 0, 0.151);
+
+    }
+
+    .form-div {
+        margin-top: 20px;
+        padding: 22px;
+        box-shadow: 0px 6px rgba(0, 0, 0, 0.151);
+    }
+
+    .form-div input {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+
+    input::placeholder {
+        font-weight: 500;
+        font-size: 13px;
+    }
+
+    .form-div button {
+        font-size: 14px;
+    }
+
+    .form-div span,
+    .form-div span.terms {
+        font-size: 12px;
+    }
+
+    .error-icon{
+        right: 15px;
+    }
+
+    .error-Msg{
+        font-size: 11px;
+    }
+}
+
+/* ************************************************************************************************ */
+/* *************************************   END media QUERY   ************************************** */
+/* ************************************************************************************************ */

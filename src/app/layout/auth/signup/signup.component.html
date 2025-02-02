@@ -1,0 +1,89 @@
+<section class="signUp-section">
+    <div class="container">
+
+
+        <div class="row w-100 m-0">
+
+            <div class="col-lg-7  col-xl-6">
+                <div class="hero-text d-flex justify-content-center align-items-center flex-column h-100  ">
+
+
+                    <h1>Learn to code by watching others</h1>
+                    <p>
+                        See how experienced developers solve problems in real-time.<br>
+                        Watching scripted tutorials is great, but understanding how
+                        developers think is invaluable.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-5  col-xl-6">
+                <div>
+                    <div class="free-trial-label w-100">
+                        <p class="my-0">Try it free 7 days <span class="fw-lighter">then $20/mo. thereafter</span> </p>
+                    </div>
+
+                    <form [formGroup]="signUpForm" (submit)="setRegister()">
+                        <div class="form-div text-center">
+
+                            <div class="input-div ">
+                                <input [ngClass]="{'invalid-input': FirstName?.errors && FirstName?.touched}"
+                                    formControlName="FirstName" type="text" class="form-control"
+                                    placeholder="First Name">
+                                @if (FirstName?.errors && FirstName?.touched) {
+                                <span class="error-Msg">First Name cannot be empty</span>
+                                <span class="error-icon"> <img src="./assets/images/icon-error.svg" alt=""> </span>
+                                }
+                            </div>
+
+                            <div class="input-div">
+                                <input [ngClass]="{'invalid-input': LastName?.errors && LastName?.touched}"
+                                    formControlName="LastName" type="text" class="form-control" placeholder="Last Name">
+                                @if (LastName?.errors && LastName?.touched) {
+                                <span class="error-Msg">Last Name cannot be empty</span>
+                                <span class="error-icon"> <img src="./assets/images/icon-error.svg" alt=""> </span>
+                                }
+                            </div>
+
+                            <div class="input-div">
+                                <input [ngClass]="{'invalid-input': Email?.errors && Email?.touched}"
+                                    formControlName="Email" type="email" class="form-control"
+                                    placeholder="email@example/com">
+                                @if (Email?.errors && Email?.touched) {
+                                <span class="error-Msg">Looks like this is not an email</span>
+                                <span class="error-icon"> <img src="./assets/images/icon-error.svg" alt=""> </span>
+                                }
+                            </div>
+
+                            <div class="input-div">
+                                <input [ngClass]="{'invalid-input': Password?.errors && Password?.touched}"
+                                    formControlName="Password" type="password" class="form-control"
+                                    placeholder="Password">
+                                @if (Password?.errors && Password?.touched) {
+                                <span class="error-Msg">Password cannot be empty</span>
+                                <span class="error-icon"> <img src="./assets/images/icon-error.svg" alt=""> </span>
+                                }
+                            </div>
+
+                            <div class="input-div">
+                                <input
+                                    [ngClass]="{'invalid-input': signUpForm.getError('mismatch') && ConfirmPassword?.touched}"
+                                    formControlName="ConfirmPassword" type="password" class="form-control"
+                                    placeholder="Confirm Password">
+                                @if (signUpForm.getError('mismatch') && ConfirmPassword?.touched) {
+                                <span class="error-Msg">Password cannot be empty</span>
+                                <span class="error-icon"> <img src="./assets/images/icon-error.svg" alt=""> </span>
+                                }
+                            </div>
+
+                            <button class="btn"> CLAIM YOUR FREE TRIAL </button>
+                            <span> By clicking the button, you are agreeing to our
+                                <span class="fw-bold terms">Terms and Services</span>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
